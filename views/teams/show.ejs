@@ -1,0 +1,22 @@
+<%- include('../partials/header') %>
+<section id="show-page">
+  <div>Team Name:</div>
+  <div><%= team.teamName %></div>
+  <div>Formation:</div>
+  <div><%= team.formation %></div>
+</section>
+<div>Team:</div>
+<ul>
+  <%- team.players.map(p => `
+  <li>${p.name} <small>${p.position}</small></li>
+  ` ).join('') %>
+</ul>
+<form id="addPlayer" action="/teams/<%= team._id %>/players" method="POST">
+  <select name="playerId">
+    <%- players.map(p => `
+    <option value="${p._id}">${p.name}</option>
+    ` ).join('') %>
+  </select>
+  <button type="submit">Add To Team</button>
+</form>
+<%- include('../partials/footer') %>

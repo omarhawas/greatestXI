@@ -1,0 +1,25 @@
+<%- include('../partials/header') %>
+<p>
+  Please first ensure that the player is not in the dropdown
+  <select>
+    <% players.forEach(function(p) { %>
+    <option><%= p.name %></option>
+    <% }) %>
+  </select>
+</p>
+<form id="addPlayer" action="/players" method="POST">
+  <label>Name:</label>
+  <input type="text" name="name" />
+  <select name="position">
+    <option value="gk">GK</option>
+    <option value="defender">Defender</option>
+    <option value="midfielder">Midfielder</option>
+    <option value="forward">Forward</option>
+  </select>
+  <label>Club:</label>
+  <input type="text" name="club" />
+  <label>Nationality:</label>
+  <input type="text" name="nationality" />
+  <input type="submit" value="Add Player" />
+</form>
+<%- include('../partials/footer') %>
