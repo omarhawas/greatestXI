@@ -31,9 +31,11 @@ Technologies Used:
 
 Create Your Team:
 
+https://greatesteleven.herokuapp.com/teams
+
 Future Enhancements:
 
 - Implement API to select players
 - Implement OAuth
 - Create users
-- Allow users to add a like to teams
+- Allow users to like teams and list them based on number of likes
