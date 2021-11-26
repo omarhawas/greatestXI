@@ -3,12 +3,12 @@ const Player = require("../models/player");
 
 function index(req, res) {
   Team.find({}, function (err, teams) {
-    res.render("teams/index", { title: "Greatest XI's", teams });
+    res.render("teams/index", { title: "GREATEST XI'S", teams });
   });
 }
 
 function newTeam(req, res) {
-  res.render("teams/new", { title: "Add Team" });
+  res.render("teams/new", { title: "Create Team" });
 }
 
 function create(req, res) {
@@ -54,7 +54,7 @@ function addPlayerToTeam(req, res) {
 
 function edit(req, res) {
   Team.findById(req.params.id, function (err, team) {
-    res.render("teams/edit", { team: team, title: "Edit Page" });
+    res.render("teams/edit", { team: team, title: "Edit Team" });
   });
 }
 
