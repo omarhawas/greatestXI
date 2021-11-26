@@ -19,4 +19,16 @@
   </select>
   <button type="submit">Add To Team</button>
 </form>
+<form action="/teams/<%= team._id %>/comments" method="POST">
+  <label>Comments:</label>
+  <textarea name="comment"></textarea>
+  <input type="submit" value="Add Comment" />
+</form>
+<div>Comments:</div>
+<ul>
+  <%- team.comments.map(c => `
+  <li>${c.comment}</li>
+  ` ).join('') %>
+</ul>
+
 <%- include('../partials/footer') %>

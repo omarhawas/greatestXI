@@ -1,7 +1,7 @@
 * {
   box-sizing: border-box;
   font-family: Helvetica;
-  color: #424748;
+  color: #010c05;
 }
 
 body {
@@ -16,7 +16,7 @@ body {
 
 body > nav {
   grid-area: nav;
-  background-color: #b8c0c2;
+  background-color: #c32929;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -34,7 +34,7 @@ body > main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #e8eceb;
+  background-color: #e7e6d7;
   padding: 20px;
   overflow-y: scroll;
 }

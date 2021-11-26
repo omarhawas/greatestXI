@@ -6,7 +6,7 @@ const playerSchema = new Schema(
     name: String,
     position: String,
     club: String,
-    nationality: String,
+    country: String,
   },
   {
     timeStamps: true,
