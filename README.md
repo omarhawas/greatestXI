@@ -12,9 +12,12 @@ View other people's teams and leave a comment if there's anything you'd change!
 
 Screenshots:
 ![screenshotImage](./assets/images/pic1.png)
-![screenshotImage](./assets/images/pic 2.png)
-![screenshotImage](./assets/images/pic 3.png)
-![screenshotImage](./assets/images/pic 4.png)
+
+![screenshotImage](./assets/images/pic2.png)
+
+![screenshotImage](./assets/images/pic3.png)
+
+![screenshotImage](./assets/images/pic4.png)
 
 Technologies Used:
 
