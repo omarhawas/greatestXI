@@ -165,10 +165,17 @@ li {
 }
 
 .commentBox {
-  width: 20%;
-  height: 100px;
-  padding: 10px;
-  margin-top: 50px;
-  margin-right: 10px;
-  margin-left: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  width: 400px;
+  line-height: 26px;
+  margin-bottom: 10px;
+}
+
+.selectPlayer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin-bottom: 15px;
 }
