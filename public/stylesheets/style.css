@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-  font-family: Helvetica;
+  font-family: Arial;
   color: #010c05;
 }
 
@@ -33,8 +33,8 @@ body > main {
   grid-area: main;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  background-color: #e7e6d7;
+  align-items: left;
+  background-color: #ffffff85;
   padding: 20px;
   overflow-y: scroll;
 }
@@ -51,8 +51,8 @@ nav > a {
 }
 
 nav > a:hover {
-  color: white;
-  background-color: #424748;
+  color: #424748;
+  background-color: white;
 }
 
 nav > a.active {
@@ -65,10 +65,10 @@ nav > a.active {
   grid-template-columns: repeat(2, minmax(auto, 22rem));
 }
 
-#new-form *,
-#add-review-form *,
-#add-performer-form * {
-  font-size: 20px;
+#new-form,
+#add-comment-form,
+#add-player-form {
+  font-size: 18px;
   padding: 5px;
   border-radius: 5px;
 }
@@ -104,10 +104,11 @@ table td {
   padding: 4px;
   text-decoration: none;
   font-size: 14px;
+  border: 2px solid black;
 }
 
 #list a:hover {
-  background-color: white;
+  background-color: rgb(255, 255, 255);
 }
 
 #show-page {
@@ -128,8 +129,8 @@ table td {
   margin-bottom: 2rem;
 }
 
-#add-review-form input[type="submit"],
-#add-performer-form input[type="submit"] {
+#add-comment-form input[type="submit"],
+#add-player-form input[type="submit"] {
   width: 10rem;
   grid-column: 2 / 3;
 }
@@ -142,4 +143,32 @@ ul {
 
 li {
   font-weight: bold;
+}
+
+.allBtns {
+  border-radius: 4px;
+  background-color: #b8c0c2;
+  padding: 4px;
+  text-decoration: none;
+  font-size: 14px;
+  border: 2px solid black;
+}
+
+.allBtns:hover {
+  background-color: rgb(255, 255, 255);
+}
+
+.addPlayer {
+  font-size: 18px;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.commentBox {
+  width: 20%;
+  height: 100px;
+  padding: 10px;
+  margin-top: 50px;
+  margin-right: 10px;
+  margin-left: 10px;
 }

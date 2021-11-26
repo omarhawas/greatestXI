@@ -5,6 +5,8 @@
   <div>Formation:</div>
   <div><%= team.formation %></div>
 </section>
+<br />
+<br />
 <div>Team:</div>
 <ul>
   <%- team.players.map(p => `
@@ -17,13 +19,20 @@
     <option value="${p._id}">${p.name}</option>
     ` ).join('') %>
   </select>
-  <button type="submit">Add To Team</button>
+  <button type="submit" class="allBtns">Add To Team</button>
 </form>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
 <form action="/teams/<%= team._id %>/comments" method="POST">
   <label>Comments:</label>
-  <textarea name="comment"></textarea>
-  <input type="submit" value="Add Comment" />
+  <textarea name="comment" class="commentBox"></textarea>
+  <input type="submit" value="Add Comment" class="allBtns" />
 </form>
+<br />
 <div>Comments:</div>
 <ul>
   <%- team.comments.map(c => `

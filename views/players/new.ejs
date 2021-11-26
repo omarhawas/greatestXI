@@ -1,13 +1,13 @@
 <%- include('../partials/header') %>
 <p>
-  Please first ensure that the player is not in the dropdown
+  Please check to see if the player is in the dropdown first
   <select>
     <% players.forEach(function(p) { %>
     <option><%= p.name %></option>
     <% }) %>
   </select>
 </p>
-<form id="addPlayer" action="/players" method="POST">
+<form id="addPlayer" action="/players" method="POST" class="addPlayer">
   <label>Name:</label>
   <input type="text" name="name" />
   <select name="position">
@@ -20,6 +20,6 @@
   <input type="text" name="club" />
   <label>Country:</label>
   <input type="text" name="country" />
-  <input type="submit" value="Add Player" />
+  <input type="submit" value="Add Player" class="allBtns" />
 </form>
 <%- include('../partials/footer') %>

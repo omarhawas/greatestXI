@@ -3,7 +3,7 @@ const Player = require("../models/player");
 
 function index(req, res) {
   Team.find({}, function (err, teams) {
-    res.render("teams/index", { title: "All Teams", teams });
+    res.render("teams/index", { title: "Greatest XI's", teams });
   });
 }
 
