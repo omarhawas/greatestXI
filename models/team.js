@@ -19,6 +19,14 @@ const teamSchema = new Schema(
     formation: String,
     players: [{ type: Schema.Types.ObjectId, ref: "Player" }],
     comments: [commentSchema],
+    upvoteCount: {
+      type: Number,
+      default: 0,
+    },
+    downvoteCount: {
+      type: Number,
+      default: 0,
+    },
   },
   {
     timestamps: true,

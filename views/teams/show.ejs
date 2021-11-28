@@ -4,6 +4,10 @@
   <div><%= team.teamName %></div>
   <div>Formation:</div>
   <div><%= team.formation %></div>
+  <div>Up Votes:</div>
+  <div><%= team.upvoteCount %></div>
+  <div>Down Votes:</div>
+  <div><%= team.downvoteCount %></div>
 </section>
 <br />
 <br />
@@ -39,5 +43,11 @@
   <li>${c.comment}</li>
   ` ).join('') %>
 </ul>
+<form action="/teams/<%= team._id %>/upvote" method="POST">
+  <input type="submit" value="UP VOTE" class="allBtns" />
+</form>
+<form action="/teams/<%= team._id %>/downvote" method="POST">
+  <input type="submit" value="DOWN VOTE" class="allBtns" />
+</form>
 
 <%- include('../partials/footer') %>

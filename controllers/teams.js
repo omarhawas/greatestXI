@@ -64,6 +64,32 @@ function update(req, res) {
   });
 }
 
+function upvote(req, res) {
+  Team.findById(req.params.id, function (err, team) {
+    const newCount = team.upvoteCount + 1;
+    Team.findByIdAndUpdate(
+      req.params.id,
+      { upvoteCount: newCount },
+      function (err, result) {
+        res.redirect(`/teams/${team._id}`);
+      }
+    );
+  });
+}
+
+function downvote(req, res) {
+  Team.findById(req.params.id, function (err, team) {
+    const newCount = team.downvoteCount + 1;
+    Team.findByIdAndUpdate(
+      req.params.id,
+      { downvoteCount: newCount },
+      function (err, result) {
+        res.redirect(`/teams/${team._id}`);
+      }
+    );
+  });
+}
+
 module.exports = {
   index,
   new: newTeam,
@@ -73,4 +99,6 @@ module.exports = {
   addPlayerToTeam,
   edit,
   update,
+  upvote,
+  downvote,
 };

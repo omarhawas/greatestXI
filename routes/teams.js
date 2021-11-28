@@ -10,5 +10,7 @@ router.delete("/:id", teamCtrl.delete);
 router.post("/:id/players", teamCtrl.addPlayerToTeam);
 router.get("/:id/edit", teamCtrl.edit);
 router.put("/:id", teamCtrl.update);
+router.post("/:id/upvote", teamCtrl.upvote);
+router.post("/:id/downvote", teamCtrl.downvote);
 
 module.exports = router;
